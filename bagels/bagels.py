@@ -7,7 +7,7 @@ class Bagels:
         self.num_dig = num_dig
         self.max_popitok = max_popitok
 
-    def HIDE_NUMBER_PLUS(num_dig):
+    def HIDE_NUMBER_PLUS(self, num_dig):
         all_digits = list(range(10))
         random.shuffle(all_digits)
         hidden_number = ''
@@ -32,7 +32,7 @@ class Bagels:
         return " ".join(podskazki)
 
 
-    def IS_DIGIT(num):
+    def IS_DIGIT(self, num):
         if num == "":
             return False
         for i in num:
@@ -41,7 +41,7 @@ class Bagels:
             return True
 
 
-    def one_more_time():
+    def one_more_time(self):
         print("Не желаете ли повторить? (1 или 2)")
         return input("1 - да.\n2 - нет.").startswith('1')
 
@@ -73,7 +73,7 @@ class Bagels:
 
             hidden_number = self.HIDE_NUMBER_PLUS(self.num_dig)
             print("Тайное число загадано.У вас есть 10 попыток.Удачи в разгадке!")
-            
+
             nomer_popitki = 1
             while nomer_popitki <= self.max_popitok:
                 PLAYERS_ANS = ""
